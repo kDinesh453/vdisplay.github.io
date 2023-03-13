@@ -1,0 +1,163 @@
+<html>
+<head>
+<title> video streaming</title>
+<style>
+
+    .dd {
+      width: 270px;
+      height: 60px;
+      border: none;
+      background:white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    
+
+    .letters {
+      width: 50px;
+      height: 50px;
+      perspective: 600px;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition: transform 1s ease-in-out;
+      transform-style: preserve-3d;
+    }
+
+    .card_face {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      backface-visibility: hidden;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .back {
+      transform: rotateY(180deg);
+    }
+
+    .dd:hover .card {
+      transform: rotateY(180deg);
+    }
+    h1
+    {
+        color:white;
+    }
+    input{
+        width:10%;
+        height:40;
+    }
+    td
+    {
+        padding:5px;
+    }
+  
+
+    h1
+    {
+        color:white;
+    }
+    input{
+        width:10%;
+        height:40;
+    }
+    td
+    {
+        padding:5px;
+    }
+  
+</style>
+<script type="text/javascript">
+    function add()
+    {
+        var a=Number(document.getElementById("mydiv").value);
+        var b=a+1;
+        document.getElementById("mydiv").value = b;
+
+    }
+    function comment(){
+        
+        document.getElementById("ptag").innerHTML += "<input placeholder=' write your comment here...'>";
+
+    }
+</script>
+</head>
+<body align="center" bgcolor="grey">
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+<h1 >
+ Welcome to my channel
+</h1>
+<video width="440" height="360" controls autoplay><source src="C:\UI\html\project2\Uruguay__Feel_Nature__1_min_(480p).mp4" type="video/mp4"></video><br>
+<table align="center">
+    <tr><td>
+<button onclick="add();" class="like">
+        <img width="45" height="35" src="C:\UI\html\project2\like (1).png">
+</button>
+ </td>
+<td> <input id="mydiv" value="0"></td>
+<td><button class="dd">
+      <div class="letters">
+        <div class="card">
+          <div class="card_face front">S</div>
+          <div class="card_face back"><i class="fab fa-github-square"></i></div>
+        </div>
+      </div>
+
+      <div class="letters">
+        <div class="card">
+          <div class="card_face front">H</div>
+          <div class="card_face back">
+            <i class="fab fa-twitter-square"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="letters">
+        <div class="card">
+          <div class="card_face front">A</div>
+          <div class="card_face back">
+            <i class="fab fa-facebook-square"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="letters">
+        <div class="card">
+          <div class="card_face front">R</div>
+          <div class="card_face back">
+            <i class="fab fa-instagram-square"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="letters">
+        <div class="card">
+          <div class="card_face front">E</div>
+          <div class="card_face back">
+            <i class="fab fa-linkedin"></i>
+          </div>
+        </div>
+      </div>
+    </button> </td>
+<td><button onclick="comment(); this.onclick=null;" class="comment"><img width="45" height="35" src="C:\UI\html\project2\15992.png"></button> </td>
+</tr></table><br><br>
+<p id="ptag"></p>
+</body>
+</html>
